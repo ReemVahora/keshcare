@@ -4,6 +4,10 @@ import openai
 import prompts
 
 client = openai.OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+st.set_page_config(page_title="KeshCare", page_icon="🪷")
+st.title("KeshCare🍃")
+results = ""
+
 
 #Initializing session states
 if "quiz_started" not in st.session_state:
@@ -17,22 +21,14 @@ if "awaiting_response" not in st.session_state:
     st.session_state.awaiting_response = False
 
 
-st.set_page_config(page_title="KeshCare", page_icon="🪷")
-st.title("KeshCare🍃")
-
-
 if not st.session_state.quiz_started:
     st.write("[INSERT INTRO HERE]")
     if st.button("Start Quiz 🡪"):
         st.session_state.quiz_started = True
         st.rerun()
 
-# if start_quiz:
-#     user_input = st.chat_input("Your response: ")
-#     st.session_state.quiz_started = True    
-# for msg in st.session_state.chat_history[2:]:
-#     st.chat_message(msg["role"]).write(msg["content"])
-
+for msg in st.session_state.chat_history[2:]:
+    st.chat_message(msg["role"]).write(msg["content"])
 
 
 #############################################################################################################
@@ -58,10 +54,14 @@ def bot_response_logic(user_input):
 
     st.session_state.chat_history.append({"role": "assistant", "content": bot_reply})    
     
-    if "✓" not in bot_reply:    
-        st.session_state.awaiting_response = True
-        user_input_logic(user_input)
+    st.session_state.awaiting_response = True
+    user_input_logic(user_input)
         
+    if "✓" in bot_reply:
+        results = bot_reply
+
+    #     st.session_state.awaiting_response = True
+    #     user_input_logic(user_input)
     
 #############################################################################################################
 #Will come back here every rerun
