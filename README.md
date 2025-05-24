@@ -4,7 +4,7 @@ KeshCare is an interactive AI chatbot that guides users through personalized Ayu
 
 My aim is to provide users with personalised recommended ingredients for users curious about Indian haircare especially those who are yet to hear about Ayurveda. Indian hair has attracted attention worldwide and now many people share online on how hair oiling has changed their life! My hope for this project is to introduce, or educate users further on Ayurvedic recommendations and principles, so that they are recommended hair oils and routines personalised for them, achieving balance in their haircare. 
 
-(Does not recommend brands or branded products. I'm not getting paid for this)
+(Does not recommend brands or branded products. We are not sponsored.)
 
 ---
 
@@ -21,7 +21,7 @@ My aim is to provide users with personalised recommended ingredients for users c
 
 ## Demo
 
-*Later*
+*Coming soon*
 
 ---
 
@@ -30,8 +30,10 @@ My aim is to provide users with personalised recommended ingredients for users c
 ### Prerequisites
 
 - Python 3.8+
-- OpenAI API key
-- Streamlit
+- *OpenAI API key
+- *Streamlit
+
+*see requirements.txt at installation step
 
 ### Installation
 
