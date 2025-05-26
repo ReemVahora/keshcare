@@ -8,7 +8,6 @@ st.set_page_config(page_title="KeshCare", page_icon="🪷")
 st.title("KeshCare🍃")
 results = ""
 
-
 #Initializing session states
 if "quiz_started" not in st.session_state:
     st.session_state.quiz_started = False
@@ -20,19 +19,23 @@ if "chat_history" not in st.session_state:
 if "awaiting_response" not in st.session_state:
     st.session_state.awaiting_response = False
 
-
 if not st.session_state.quiz_started:
     st.write("[INSERT INTRO HERE]")
     if st.button("Start Quiz 🡪"):
         st.session_state.quiz_started = True
         st.rerun()
 
-for msg in st.session_state.chat_history[2:]:
-    st.chat_message(msg["role"]).write(msg["content"])
+# Abstracted methods
+
+# Load style
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
-#############################################################################################################
-#Abstracted methods so that they can jump back and forth
+def display_chat_history():
+    for msg in st.session_state.chat_history[2:]:
+        st.chat_message(msg["role"]).write(msg["content"])
 
 def user_input_logic(user_input):
     if user_input:
@@ -50,21 +53,19 @@ def bot_response_logic(user_input):
             max_tokens=500
         )
         bot_reply = response.choices[0].message.content
-        st.write(f"AI: {bot_reply}")
-
-    st.session_state.chat_history.append({"role": "assistant", "content": bot_reply})    
+        st.session_state.chat_history.append({"role": "assistant", "content": bot_reply})
     
-    st.session_state.awaiting_response = True
-    user_input_logic(user_input)
-        
-    if "✓" in bot_reply:
-        results = bot_reply
+    if "✓" in bot_reply: results = bot_reply
 
-    #     st.session_state.awaiting_response = True
-    #     user_input_logic(user_input)
+    st.session_state.awaiting_response = True
+    st.rerun()
+        
     
 #############################################################################################################
+
 #Will come back here every rerun
+local_css("styles.css")
+display_chat_history()
 
 if st.session_state.quiz_started:
     #user input only here once, so problem fixed. 
