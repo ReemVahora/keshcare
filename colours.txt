@@ -1,0 +1,102 @@
+Earthy-tone friendly colours dictionary!!
+Courtesy of ChatGPT
+
+Contains:
+- Browns & Beiges (Earth/Soil/Clay Inspired)
+- Greens (Foliage, Moss, Herbal Notes)
+- Greys & Stones
+- Terracottas & Oranges (Clay/Rusty Hues)
+- Reds & Wines (Roots & Earth Minerals)
+- Yellows & Ochres (Sunlight, Hay, Grains)
+
+
+🌰 Browns & Beiges (Earth/Soil/Clay Inspired)
+
+Dark Browns:
+Saddle Brown #8B4513
+Raw Umber #826644
+Coffee #6F4E37
+Sepia #704214
+
+Medium Browns:
+Chestnut #954535
+Copper #B87333
+Russet #80461B
+Burnt Umber #8A3324
+
+Light Browns & Beiges:
+Tan #D2B48C
+Khaki #F0E68C
+Sand #C2B280
+Camel #C19A6B
+Fawn #E5AA70
+
+
+🌿 Greens (Foliage, Moss, Herbal Notes)
+
+Dark Greens:
+Forest Green #228B22
+Moss Green #8A9A5B
+Olive #808000
+Army Green #4B5320
+
+Soft/Natural Greens:
+Sage #B2AC88
+Fern #4F7942
+Laurel Green #A9BA9D
+Tea Green #D0F0C0
+
+
+🪨 Greys & Stones
+
+Warm Greys:
+Ash Grey #B2BEB5
+Slate Grey #708090
+Taupe #483C32
+Mushroom #BFAFB2
+
+Cool Stones:
+Granite #676767
+River Rock #A89F91
+Dust #D4CFC9
+
+
+🍂 Terracottas & Oranges (Clay/Rusty Hues)
+
+Deep Terracottas:
+Terracotta #E2725B
+Brick #B22222
+Burnt Sienna #E97451
+Clay #B66E41
+
+Muted Oranges:
+Papaya Whip #FFEFD5
+Desert Sand #EDC9Af
+Sunset Orange #FD5E53
+
+
+🍁 Reds & Wines (Roots & Earth Minerals)
+
+Warm Reds:
+Mahogany #C04000
+Redwood #A45A52
+Garnet #733635
+Brick Red #CB4154
+
+Dusty/Rosy Reds:
+Rosewood #65000B
+Clay Rose #C48189
+
+
+🪵 Yellows & Ochres (Sunlight, Hay, Grains)
+
+Golden/Earthy Yellows:
+Ochre #CC7722
+Mustard #FFDB58
+Saffron #F4C430
+Goldenrod #DAA520
+
+Light Tans:
+Wheat #F5DEB3
+Flax #EEDC82
+Straw #E4D96F

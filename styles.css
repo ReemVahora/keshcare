@@ -1,0 +1,19 @@
+/* styles.css */
+body {
+    background-color: #F5F0E6;
+    color: #2C1D13;
+    font-family: 'Georgia', serif;
+}
+
+.stButton > button {
+    background-color: #6B4C3B;
+    color: white;
+    border-radius: 8px;
+    padding: 0.5em 1.2em;
+    font-weight: bold;
+}
+
+input, textarea {
+    border-radius: 6px;
+    border: 1px solid #6B4C3B;
+}
