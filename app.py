@@ -1,12 +1,12 @@
 # YALL IT WORKSSSSS
 import streamlit as st
 import openai
+
 import prompts
 
 client = openai.OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 st.set_page_config(page_title="KeshCare", page_icon="🪷")
 st.title("KeshCare🍃")
-results = ""
 
 #Initializing session states
 if "quiz_started" not in st.session_state:
@@ -18,12 +18,16 @@ if "chat_history" not in st.session_state:
     ]
 if "awaiting_response" not in st.session_state:
     st.session_state.awaiting_response = False
+if "results" not in st.session_state:
+    st.session_state.results = ""
 
 if not st.session_state.quiz_started:
     st.write("[INSERT INTRO HERE]")
     if st.button("Start Quiz 🡪"):
         st.session_state.quiz_started = True
         st.rerun()
+
+#############################################################################################################
 
 # Abstracted methods
 
@@ -34,8 +38,13 @@ def local_css(file_name):
 
 
 def display_chat_history():
-    for msg in st.session_state.chat_history[2:]:
-        st.chat_message(msg["role"]).write(msg["content"])
+    for i, msg in enumerate(st.session_state.chat_history[2:]):
+        if "✓" in msg["content"]:
+            st.chat_message(msg["role"]).write("Your results are ready below! Remember you can continue to ask me whatever you like.")
+            if st.button("View Results", key=f"view_results_btn_{i}"):
+                st.switch_page("pages/1_results.py")
+        else:
+            st.chat_message(msg["role"]).write(msg["content"])
 
 def user_input_logic(user_input):
     if user_input:
@@ -55,8 +64,9 @@ def bot_response_logic(user_input):
         bot_reply = response.choices[0].message.content
         st.session_state.chat_history.append({"role": "assistant", "content": bot_reply})
     
-    if "✓" in bot_reply: results = bot_reply
-
+    if "✓" in bot_reply:
+        st.session_state.results = bot_reply
+    
     st.session_state.awaiting_response = True
     st.rerun()
         
