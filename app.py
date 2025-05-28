@@ -5,8 +5,8 @@ import openai
 import prompts
 
 client = openai.OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
-st.set_page_config(page_title="KeshCare", page_icon="🪷")
-st.title("KeshCare🍃")
+st.set_page_config(page_title="KeshCare", page_icon="🍃")
+st.title("KeshCare🪷")
 
 #Initializing session states
 if "quiz_started" not in st.session_state:
@@ -21,8 +21,9 @@ if "awaiting_response" not in st.session_state:
 if "results" not in st.session_state:
     st.session_state.results = ""
 
+
 if not st.session_state.quiz_started:
-    st.write("[INSERT INTRO HERE]")
+    st.write(prompts.buildIntro())
     if st.button("Start Quiz 🡪"):
         st.session_state.quiz_started = True
         st.rerun()
