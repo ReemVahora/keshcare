@@ -39,7 +39,7 @@ def local_css(file_name):
 def display_chat_history():
     for i, msg in enumerate(st.session_state.chat_history[2:]):
         if "✓" in msg["content"]:
-            st.chat_message(msg["role"]).write("Your results are ready below! Remember you can continue to ask me whatever you like.")
+            st.chat_message(msg["role"]).write("Your results are ready below! Any questions or concerns?")
             if st.button("View Results", key=f"view_results_btn_{i}"):
                 st.switch_page("pages/1_results.py")
         else:
