@@ -83,6 +83,7 @@ REGARDING REGENERATION OF RESULTS:
 def buildHomeInfo():
     return """
 **Curious about the secrets behind traditional Indian haircare?**
+
 Rooted in ancient wisdom and natural rhythms, Ayurveda offers a gentle yet powerful path to understanding and nurturing your hair, from the inside out. 
 
 Ayurveda, translated from Sanskrit as “the science of life,” is a holistic system of wellness that originated in India over 5,000 years ago. Rooted in nature and balance, Ayurveda teaches that health is achieved when the body, mind, and spirit exist in harmony with the environment. At its core, it views each individual as a unique combination of the five elements- earth, water, fire, air, and ether- which form the foundation of three biological energies, or **doshas**: 
@@ -98,9 +99,16 @@ def buildIntro():
     return """
 Hi, I’m Neemah, your personal Ayurvedic haircare guide.🌸
 
-This short quiz is designed to help determine your unique hair dosha composition— Vata, Pitta, Kapha, or a combination— based on Ayurvedic principles. With your responses, I’ll offer personalized guidance on ingredients, oils, and holistic practices best suited for your hair type.
+This quiz is designed to help determine your unique hair dosha composition— Vata, Pitta, Kapha, or a combination— based on Ayurvedic principles. With your responses, I’ll offer personalized guidance on ingredients, oils, and holistic practices best suited for your hair type.
 
 Feel free to share as much detail as you’d like. The more I understand, the more accurate your results will be. If at any point you’d like to revise an answer or add something new, just let me know— we can always revisit and refine your results together.🌿
 
 Are you ready?
+"""
+
+def testResults():
+    return """
+{Thank you for sharing your goal of adding volume to your hair. Based on your responses about your curly, medium-density hair with a balanced scalp, and your interest in natural, organic care, let's determine the best Ayurvedic approach for you.}
+
+✓{"Vata": 30,"Pitta": 30,"Kapha": 40}
 """

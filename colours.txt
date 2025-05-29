@@ -1,15 +1,6 @@
 Earthy-tone friendly colours dictionary!!
 Courtesy of ChatGPT
 
-Contains:
-- Browns & Beiges (Earth/Soil/Clay Inspired)
-- Greens (Foliage, Moss, Herbal Notes)
-- Greys & Stones
-- Terracottas & Oranges (Clay/Rusty Hues)
-- Reds & Wines (Roots & Earth Minerals)
-- Yellows & Ochres (Sunlight, Hay, Grains)
-
-
 🌰 Browns & Beiges (Earth/Soil/Clay Inspired)
 
 Dark Browns:
@@ -38,7 +29,7 @@ Dark Greens:
 Forest Green #228B22
 Moss Green #8A9A5B
 Olive #808000
-Army Green #4B5320
+!Army Green #4B5320
 
 Soft/Natural Greens:
 Sage #B2AC88
@@ -100,3 +91,43 @@ Light Tans:
 Wheat #F5DEB3
 Flax #EEDC82
 Straw #E4D96F
+
+
+
+Purples (Earthy/Muted)
+Shade Name	Hex Code	Description
+Mauve	#A3899D	Dusty purple with grey tones
+Thistle	#D8BFD8	Soft lavender-pink
+Heather	#B7A1C2	Pale purple with warm undertone
+Orchid Smoke	#C1A3B5	Smoky and muted floral purple
+Dusty Plum	#A9748A	Earthy plum
+
+🌊 Blues (Muted/Desaturated)
+Shade Name	Hex Code	Description
+Slate Blue	#6A7BA2	Muted navy with a warm cast
+Stormy Blue	#748CAB	Greyish blue, calming
+Powder Blue	#B0C4DE	Pale soft blue
+Dusty Denim	#7E9BAE	Soft mid-tone faded denim
+Steel Blue	#4682B4	Rich but earthy blue
+
+
+Vata
+Dusty Lavender: #BFAFB2
+!Sage Grey: #A8B0A2
+Muted Blue: #A9C0C8
+Warm Taupe: #C5B8A5
+
+Pitta (Fire + Water)
+Cooling, soothing tones that feel organic next to warm beige
+Soft Olive: #A7A985
+Cool Clay: #C2B59B
+Misty Green: #BFCABA
+Muted Rose: #D6A79B
+
+Kapha (Earth + Water)
+Energizing yet natural shades to uplift and balance Kapha
+Terracotta: #B56B45
+Forest Moss: #6E8B74
+Muted Mustard: #C4A35A
+Deep Clay: #8C5C4E
+

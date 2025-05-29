@@ -3,12 +3,12 @@ import openai
 
 import prompts
 
-st.set_page_config(page_title="KeshCare", page_icon="🍃")
+st.set_page_config(page_title="KeshCare", page_icon="🪷")
 with open("styles.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 client = openai.OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
-st.title("🪷")
+# st.title("🪷")
 
 
 if "chat_history" not in st.session_state:
@@ -20,7 +20,7 @@ if "chat_history" not in st.session_state:
 if "awaiting_response" not in st.session_state:
     st.session_state.awaiting_response = True
 if "results" not in st.session_state:
-    st.session_state.results = ""
+    st.session_state.results = prompts.testResults()
 
 
 #############################################################################################################
