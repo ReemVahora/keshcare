@@ -4,11 +4,9 @@ import plotly.express as px
 import re
 import json
 
-def local_css(file_name):
-    with open(file_name) as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
-local_css("styles.css")
+st.set_page_config(page_title="KeshCare", page_icon="🍃")
+with open("styles.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 st.title("Your Results")
 
@@ -41,4 +39,4 @@ else:
     st.warning("No results found. Please complete the quiz first.")
 
 if st.button("Back", key="back_button"):
-    st.switch_page("app.py")
+    st.switch_page("pages/0_quiz.py")

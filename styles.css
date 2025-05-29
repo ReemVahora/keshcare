@@ -1,9 +1,21 @@
-/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap');
+
+
 body {
     background-color: #F5F0E6;
     color: #2C1D13;
     font-family: 'Georgia', serif;
 }
+
+h1 {
+    text-align: center;
+    color: #6B4226;
+    font-family: 'Fleur De Leah' !important;
+    font-size: 7em !important;
+    font-weight: normal;
+    margin-bottom: 0.5em !important;
+}
+
 
 .stButton > button {
     background-color: #6B4C3B;
