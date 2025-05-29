@@ -4,7 +4,7 @@ import plotly.express as px
 import re
 import json
 
-st.set_page_config(page_title="KeshCare", page_icon="🍃")
+st.set_page_config(page_title="KeshCare", page_icon="🪷")
 with open("styles.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
@@ -29,7 +29,19 @@ if st.session_state.results:
         'Dosha': list(pie_data.keys()),
         'Percentage': list(pie_data.values())
     })
-    fig = px.pie(df, names='Dosha', values='Percentage', color_discrete_sequence=['#A67B5B', '#C2B280', '#8B6E4A'], title="Your Dosha Composition")
+    dosha_colors = {
+    "Vata": "#A8B0A2",
+    "Pitta": "#A7A985",
+    "Kapha": "#8C5C4E"
+    }
+
+    fig = px.pie(df,
+                 names='Dosha',
+                 values='Percentage',
+                 color="Dosha",
+                 color_discrete_map=dosha_colors,
+                 title="Your Dosha Composition"
+                 )
     st.plotly_chart(fig, use_container_width=True)
 
     # rest of results

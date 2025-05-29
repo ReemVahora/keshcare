@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Ballet:opsz@16..72&family=Beau+Rivage&family=Carattere&family=Ephesis&family=Fleur+De+Leah&family=Great+Vibes&family=Gwendolyn:wght@400;700&family=Imperial+Script&family=Lavishly+Yours&family=Lovers+Quarrel&family=Lugrasimo&family=Mea+Culpa&family=MonteCarlo&family=Updock&display=swap');
 
 
 body {
-    background-color: #F5F0E6;
+    /*background-color: #F0E68C;*/
     color: #2C1D13;
     font-family: 'Georgia', serif;
 }
 
 h1 {
     text-align: center;
-    color: #6B4226;
-    font-family: 'Fleur De Leah' !important;
-    font-size: 7em !important;
-    font-weight: normal;
-    margin-bottom: 0.5em !important;
+    color: #4B5320 !important;
+    font-family: 'Great Vibes' !important;
+    font-size: 10em !important;
+    font-weight: normal !important;
+    margin-bottom: 0.15em !important;
 }
 
 
