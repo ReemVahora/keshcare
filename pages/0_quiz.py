@@ -1,41 +1,31 @@
-# YALL IT WORKSSSSS
 import streamlit as st
 import openai
 
 import prompts
 
-client = openai.OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 st.set_page_config(page_title="KeshCare", page_icon="🍃")
-st.title("KeshCare🪷")
+with open("styles.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-#Initializing session states
-if "quiz_started" not in st.session_state:
-    st.session_state.quiz_started = False
+client = openai.OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+st.title("🪷")
+
+
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = [
         {"role": "system", "content": prompts.buildSystemPrompt()},
-        {"role": "user", "content": "Hi, I'm ready to begin the hair quiz."}
+        {"role": "user", "content": "Hi, I'm ready for the introduction."},
+        {"role": "assistant", "content": prompts.buildIntro()}
     ]
 if "awaiting_response" not in st.session_state:
-    st.session_state.awaiting_response = False
+    st.session_state.awaiting_response = True
 if "results" not in st.session_state:
     st.session_state.results = ""
 
 
-if not st.session_state.quiz_started:
-    st.write(prompts.buildIntro())
-    if st.button("Start Quiz 🡪"):
-        st.session_state.quiz_started = True
-        st.rerun()
-
 #############################################################################################################
 
 # Abstracted methods
-
-# Load style
-def local_css(file_name):
-    with open(file_name) as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 def display_chat_history():
     for i, msg in enumerate(st.session_state.chat_history[2:]):
@@ -73,12 +63,13 @@ def bot_response_logic(user_input):
     
 #############################################################################################################
 
-#Will come back here every rerun
-local_css("styles.css")
-display_chat_history()
+# Will come back here every rerun
 
 if st.session_state.quiz_started:
-    #user input only here once, so problem fixed. 
+    display_chat_history()
+
+if st.session_state.quiz_started:
+    # user input only here once, so problem fixed. 
     user_input = st.chat_input("Your response")
     
     if st.session_state.awaiting_response: user_input_logic(user_input)

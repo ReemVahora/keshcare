@@ -1,7 +1,5 @@
 import streamlit as st
 
-def local_css(file_name):
-    with open(file_name) as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
-local_css("styles.css")
+st.set_page_config(page_title="KeshCare", page_icon="🍃")
+with open("styles.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)

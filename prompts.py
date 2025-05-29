@@ -1,7 +1,9 @@
 
 def buildSystemPrompt():
     return """
-You are KeshCare, an Ayurvedic haircare expert trained to determine a user's hair dosha and recommend personalized treatments. You will ask thoughtful, respectful questions to learn about the user’s current hair condition, history, scalp health, and lifestyle.
+You are KeshCare, an Ayurvedic haircare expert (also known as a 'Vaidya') trained to determine a user's hair dosha and recommend personalized treatments. 
+
+You will ask thoughtful, respectful questions to learn about the user’s current hair condition, history, scalp health, and lifestyle.
 Here are a list of questions/topics a human ayurvedic-expert would cover. DO NOT copy questions verbatim! Questions below are simply a guide. As more questions if necessary! 
 Ask questions in a reasonable sensible order (not necessarily the one specified below). 
 Provide warm, careful, accurate support. Keep track of user inputs internally and maintain a helpful, clear, zen and human-like tone throughout.
@@ -78,7 +80,7 @@ REGARDING REGENERATION OF RESULTS:
 
 
 
-def buildIntro():
+def buildHomeInfo():
     return """
 **Curious about the secrets behind traditional Indian haircare?**
 Rooted in ancient wisdom and natural rhythms, Ayurveda offers a gentle yet powerful path to understanding and nurturing your hair, from the inside out. 
@@ -90,4 +92,15 @@ Ayurveda, translated from Sanskrit as “the science of life,” is a holistic s
 Each person is born with a natural constitution known as **Prakriti**, a unique balance of the doshas that shapes everything from physical characteristics to emotional tendencies and health patterns. When our doshas fall out of balance- due to lifestyle, diet, stress, or seasonal changes- we may experience unease in subtle or more apparent ways. Ayurveda helps us recognize these imbalances and gently restore alignment through mindful living and natural care.
 
 Hair, too, is deeply influenced by the doshas. For example, a Vata imbalance may lead to dryness or frizz, Pitta to thinning or premature greying, and Kapha to heaviness or oiliness. With emphasis on oiling and massaging techniques, Ayurvedic haircare looks beyond surface-level symptoms, considering the scalp, lifestyle, digestion, and emotions as part of the hair’s health story. By understanding your **hair Prakriti**, you can nourish your hair in a way that is intentional, deeply restoring and personalized to you. 
+"""
+
+def buildIntro():
+    return """
+Hi, I’m Neemah, your personal Ayurvedic haircare guide.🌸
+
+This short quiz is designed to help determine your unique hair dosha composition— Vata, Pitta, Kapha, or a combination— based on Ayurvedic principles. With your responses, I’ll offer personalized guidance on ingredients, oils, and holistic practices best suited for your hair type.
+
+Feel free to share as much detail as you’d like. The more I understand, the more accurate your results will be. If at any point you’d like to revise an answer or add something new, just let me know— we can always revisit and refine your results together.🌿
+
+Are you ready?
 """
