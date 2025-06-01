@@ -7,9 +7,19 @@ body {
     font-family: 'Georgia', serif;
 }
 
+.stMainBlockContainer {
+  max-width: 800px;
+  margin: 2rem auto;               /* center it */
+  background-color: #FAF5EE !important;       /* white card */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
 h1 {
     text-align: center;
-    color: #4B5320 !important;
+    
+    /*color: #4B5320 !important;*/
     font-family: 'Great Vibes' !important;
     font-size: 10em !important;
     font-weight: normal !important;
