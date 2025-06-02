@@ -14,8 +14,5 @@ st.subheader("Contact")
 st.write("""Questions or feedback?\n\n Feel free to reach out via email:
 **\[[vahora.reem@gmail.com](mailto:vahora.reem@gmail.com)]**""")
 st.subheader("Accessibility Commitment")
-
 st.write("We strive to make this app welcoming and accessible to everyone. If you experience any difficulties or have suggestions to improve accessibility, please contact us.")
-
-
 st.write("Thank you for trusting this space to explore your wellness. May your journey be insightful and balanced.")
