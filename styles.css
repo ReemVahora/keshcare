@@ -1,19 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Ballet:opsz@16..72&family=Beau+Rivage&family=Carattere&family=Ephesis&family=Fleur+De+Leah&family=Great+Vibes&family=Gwendolyn:wght@400;700&family=Imperial+Script&family=Lavishly+Yours&family=Lovers+Quarrel&family=Lugrasimo&family=Mea+Culpa&family=MonteCarlo&family=Updock&display=swap');
 
 
-body {
-    /*background-color: #F0E68C;*/
-    color: #2C1D13;
+.stApp {
     font-family: 'Georgia', serif;
+    
+    background-image: url('https://img.freepik.com/premium-photo/seamless-pattern-with-lotus-flowers-beige-background-vector-art-illustration_820340-11435.jpg') !important;
+    background-repeat: repeat !important;        
+    background-size: 200px 200px !important;            
+    background-position: top left !important;
+    background-blend-mode: multiply;
+    
 }
 
 .stMainBlockContainer {
-  max-width: 800px;
-  margin: 2rem auto;               /* center it */
-  background-color: #FAF5EE !important;       /* white card */
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 2rem auto;               /* center it */
+    background-color: #FAF5EE !important;       /* white card */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -21,11 +26,15 @@ h1 {
     
     /*color: #4B5320 !important;*/
     font-family: 'Great Vibes' !important;
-    font-size: 10em !important;
+    font-size: 11em !important;
     font-weight: normal !important;
-    margin-bottom: 0.15em !important;
+    margin-bottom: 0.2em !important;
 }
 
+header {
+    background-color: rgba(0, 0, 0, 0) !important;
+
+}
 
 .stButton > button {
     background-color: #6B4C3B;
