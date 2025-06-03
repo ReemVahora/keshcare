@@ -4,7 +4,7 @@ st.set_page_config(page_title="KeshCare", page_icon="🪷")
 with open("styles.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-st.title("Welcome to Your Wellness Journey")
+st.title("Info & Policies")
 st.write("This app is created as a passion project to guide self-awareness through personalized Ayurvedic insights. It offers a gentle, educational approach rooted in traditional wisdom, helping you explore your dosha constitution with respect and care.")
 st.subheader("Privacy & Data Use")
 st.write("Your privacy is our priority. We **do not collect, store, or share any personal information**, including names or emails. All quiz responses remain local on your device and are used solely to provide your personalized results during your session.")

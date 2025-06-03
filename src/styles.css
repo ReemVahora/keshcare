@@ -6,7 +6,7 @@
     
     background-image: url('https://img.freepik.com/premium-photo/seamless-pattern-with-lotus-flowers-beige-background-vector-art-illustration_820340-11435.jpg') !important;
     background-repeat: repeat !important;        
-    background-size: 200px 200px !important;            
+    background-size: 150px 150px !important;            
     background-position: top left !important;
     background-blend-mode: multiply;
     
@@ -23,12 +23,16 @@
 
 h1 {
     text-align: center;
-    
-    /*color: #4B5320 !important;*/
     font-family: 'Great Vibes' !important;
-    font-size: 11em !important;
+    font-size: 6em !important;
     font-weight: normal !important;
+    text-shadow: 1px 1px 2px #B87333;
     margin-bottom: 0.2em !important;
+}
+
+.custom-title {
+    text-shadow: 2px 2px 4px #B87333;
+    font-size:11em !important;
 }
 
 header {
@@ -42,6 +46,18 @@ header {
     border-radius: 8px;
     padding: 0.5em 1.2em;
     font-weight: bold;
+    margin-top: 1.5em;
+}
+
+.stPlotlyChart {
+    display: flex;
+    justify-content: center;
+    
+    background-color: #F5ECE0;
+    padding: 1rem;
+    border-radius: 20px;
+    margin: 10px 20px;
+
 }
 
 input, textarea {

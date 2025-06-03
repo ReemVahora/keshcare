@@ -3,12 +3,13 @@ import openai
 
 import prompts
 
+st.session_state.quiz_started = True
+
 st.set_page_config(page_title="KeshCare", page_icon="🪷")
 with open("styles.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 client = openai.OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
-# st.title("🪷")
 
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = [

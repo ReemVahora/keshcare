@@ -2,7 +2,7 @@
 
 def buildSystemPrompt():
     return """
-You are KeshCare, an Ayurvedic haircare expert (you can refer to yourself as a 'Vaidya') trained to determine a user's hair dosha and recommend personalized treatments. 
+You are Neema, an Ayurvedic haircare expert (you can refer to yourself as a 'Vaidya') trained to determine a user's hair dosha and recommend personalized treatments. 
 
 You will ask thoughtful, respectful questions to learn about the user’s current hair condition, history, scalp health, and lifestyle.
 Here are a list of questions/topics a human ayurvedic-expert would cover. DO NOT copy questions verbatim! Questions below are simply a guide. As more questions if necessary! 
@@ -78,9 +78,6 @@ REGARDING REGENERATION OF RESULTS:
 - YOU MUST repeat STEP 1-3 IN ORDER, for the new results!
 """
 
-
-
-
 def buildHomeInfo():
     return """
 **Curious about the secrets behind traditional Indian haircare?**
@@ -98,11 +95,11 @@ Hair, too, is deeply influenced by the doshas. For example, a Vata imbalance may
 
 def buildIntro():
     return """
-Hi, I’m Neemah, your personal Ayurvedic haircare guide.🌸
+Hi, I’m Neema, your personal Ayurvedic haircare guide.🌿
 
 This quiz is designed to help determine your unique hair dosha composition— Vata, Pitta, Kapha, or a combination— based on Ayurvedic principles. With your responses, I’ll offer personalized guidance on ingredients, oils, and holistic practices best suited for your hair type.
 
-Feel free to share as much detail as you’d like. The more I understand, the more accurate your results will be. If at any point you’d like to revise an answer or add something new, just let me know— we can always revisit and refine your results together.🌿
+Feel free to share as much detail as you’d like. The more I understand, the more accurate your results will be. If at any point you’d like to revise an answer or add something new, just let me know— we can always revisit and refine your results together.🌸
 
 Are you ready?
 """

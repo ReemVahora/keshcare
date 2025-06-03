@@ -49,14 +49,19 @@ if st.session_state.results:
         textinfo='label+percent',
         insidetextfont=dict(size=15, family='Georgia')
     )
-    fig.update_traces(marker=dict(line=dict(color='#FAF5EE', width=2)))
+    fig.update_traces(marker=dict(line=dict(color='#F5ECE0', width=2.5)))
     fig.update_layout(
+        title={
+        'font': {'size': 28},
+        'x': 0.5,
+        'xanchor': 'center'
+        },
         paper_bgcolor='rgba(0,0,0,0)',
-        plot_bgcolor='rgba(0,0,0,0)',
         height=500,
         width=500,
         showlegend=False,
     )
+
     st.plotly_chart(fig, use_container_width=True)
 
     # rest of results
@@ -65,5 +70,5 @@ if st.session_state.results:
 else:
     st.warning("No results found. Please complete the quiz first.")
 
-if st.button("Back", key="back_button"):
+if st.button("Quiz", key="back_button"):
     st.switch_page("pages/0_quiz.py")
