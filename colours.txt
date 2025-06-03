@@ -123,6 +123,9 @@ Soft Olive: #A7A985
 Cool Clay: #C2B59B
 Misty Green: #BFCABA
 Muted Rose: #D6A79B
+Golden ochre: #B39B4C
+Soft copper: #C27C5E	
+Burnt honey: #C89F63
 
 Kapha (Earth + Water)
 Energizing yet natural shades to uplift and balance Kapha
@@ -130,4 +133,3 @@ Terracotta: #B56B45
 Forest Moss: #6E8B74
 Muted Mustard: #C4A35A
 Deep Clay: #8C5C4E
-
