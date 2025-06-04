@@ -1,4 +1,5 @@
 import streamlit as st
+import re
 
 st.set_page_config(page_title="KeshCare", page_icon="🪷")
 with open("styles.css") as f:
@@ -71,9 +72,25 @@ glossary = {
     "Vaidya": "A trained Ayurvedic practitioner who diagnoses dosha imbalances and prescribes personalized treatments."    
 }
 
+
+def highlight_text(text, keyword):
+    # Only highlight if keyword exists
+    if keyword.strip() == "":
+        return text
+    keyword_lower = keyword.lower()
+    return text.replace(
+        keyword,
+        f"<mark>{keyword}</mark>"
+    ).replace(
+        keyword.capitalize(),
+        f"<mark>{keyword.capitalize()}</mark>"
+    ).replace(
+        keyword_lower,
+        f"<mark>{keyword_lower}</mark>"
+    )
+
 sorted_glossary = dict(sorted(glossary.items()))
 
-#st.write("Search ingredients, concerns, buzzwords..")
 # Search bar
 query = st.text_input("", placeholder="Search ingredients, concerns, buzzwords...")
 
@@ -82,8 +99,14 @@ if query:
     results = {k: v for k, v in glossary.items() if query.lower() in k.lower() or query.lower() in v.lower()}
     if results:
         for ingredient, definition in results.items():
-            st.subheader(ingredient)
-            st.write(definition)
+            highlighted_term = highlight_text(ingredient, query)
+            highlighted_definition = highlight_text(definition, query)
+
+            st.markdown(f"### {highlighted_term}", unsafe_allow_html=True)
+            st.markdown(f"<p>{highlighted_definition}</p>", unsafe_allow_html=True)
+
+            #st.subheader(ingredient)
+            #st.write(definition)
     else:
         st.info("No matching terms found.")
 else:
