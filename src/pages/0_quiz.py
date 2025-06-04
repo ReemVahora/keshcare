@@ -14,6 +14,7 @@ client = openai.OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = [
         {"role": "system", "content": prompts.buildSystemPrompt()},
+        {"role": "system", "content": f"Here is a list of ayurvedic ingredients and practises you might find handy: {prompts.getGlossary()}"},
         {"role": "user", "content": "Hi, I'm ready for the introduction."},
         {"role": "assistant", "content": prompts.buildIntro()}
     ]
