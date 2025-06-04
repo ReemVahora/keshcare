@@ -168,7 +168,7 @@ def getGlossary():
         "Rasa Dhatu": "The first and most fundamental bodily tissue; nourishes all other tissues including the scalp and hair.",
         "Srotas": "Body channels; blockages here (especially in rasavaha and raktavaha srotas) can impair hair nourishment.",
         "Vaidya": "A trained Ayurvedic practitioner who diagnoses dosha imbalances and prescribes personalized treatments."
-        }
+    }
 
 
 def testResults():
