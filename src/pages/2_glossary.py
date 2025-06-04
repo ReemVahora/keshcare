@@ -72,9 +72,56 @@ glossary = {
     "Vaidya": "A trained Ayurvedic practitioner who diagnoses dosha imbalances and prescribes personalized treatments."    
 }
 
+glossary = dict(sorted(glossary.items()))
+
+# Category mapping
+categories = {
+    "Herbs & Botanicals": [
+        "Amla", "Bhringraj", "Brahmi", "Neem", "Hibiscus", "Fenugreek", "Shikakai",
+        "Reetha", "Aloe Vera", "Ashwagandha", "Licorice Root (Yashtimadhu)", "Curry Leaves",
+        "Tulsi (Holy Basil)", "Vetiver", "Nagarmotha (Cyperus Rotundus)", "Maka (Eclipta Alba)", "Kapur Kachri",
+        "Henna", "Indigo", "Manjistha", "Guduchi (Giloy)", "Kalmegh", "Triphala", "Chyawanprash"
+    ],
+    "Oils & Carriers": [
+        "Sesame Oil", "Coconut Oil", "Castor Oil", "Mustard Oil", "Almond Oil", "Tea Tree Oil",
+        "Rosemary Oil", "Lavender Oil", "Peppermint Oil", "Lemongrass Oil", "Cedarwood Oil",
+        "Brahmi Ghee", "Rosewater"
+    ],
+    "Ayurvedic Therapies & Routines": [
+        "Shiroabhyanga", "Abhyanga", "Nasya", "Shirodhara", "Takradhara", "Panchakarma", "Basti",
+        "Dinacharya", "Ritucharya"
+    ],
+    "Doshas & Diagnostic Concepts": [
+        "Vata", "Pitta", "Kapha", "Tridoshic", "Prakriti", "Vikriti", "Ojas", "Tejas", "Agni",
+        "Ama", "Rasa Dhatu", "Srotas", "Vaidya"
+    ],
+    "Supplements & Internal Use": [
+        "Ashwagandha Capsules", "Brahmi Ghee", "Triphala", "Chyawanprash", "Rosewater"
+    ]
+}
+
+categories = dict(sorted(categories.items()))
+
+# selector
+selected_categories = st.multiselect(
+    "",
+    options=list(categories.keys()),
+    placeholder="Filter by Category",
+    default=[]
+)
+
+# filtered list
+if selected_categories:
+    filtered_keys = set()
+    for cat in selected_categories:
+        filtered_keys.update(categories[cat])
+else:
+    filtered_keys = set(glossary.keys())  # Show all if no filter
+
+###################################################################################################
+# abstracted functions
 
 def highlight_text(text, keyword):
-    # Only highlight if keyword exists
     if keyword.strip() == "":
         return text
     keyword_lower = keyword.lower()
@@ -89,14 +136,36 @@ def highlight_text(text, keyword):
         f"<mark>{keyword_lower}</mark>"
     )
 
-sorted_glossary = dict(sorted(glossary.items()))
+def score_result(key, value, query):
+    pattern = r'\b{}\b'.format(re.escape(query.lower()))  # whole word pattern
+    title = key.lower()
+    desc = value.lower()
+
+    if re.search(pattern, title):
+        return 4  # highest priority: exact whole word in title
+    elif re.search(pattern, desc):
+        return 3  # whole word in definition
+    elif query.lower() in title:
+        return 2  # partial in title
+    elif query.lower() in desc:
+        return 1  # partial in definition
+    else:
+        return 0  # no match
+
+###################################################################################################
 
 # Search bar
 query = st.text_input("", placeholder="Search ingredients, concerns, buzzwords...")
 
-# Filter and display results
+# filter
 if query:
-    results = {k: v for k, v in glossary.items() if query.lower() in k.lower() or query.lower() in v.lower()}
+    results = {
+        k: glossary[k]
+        for k in filtered_keys
+        if query.lower() in k.lower() or query.lower() in glossary[k].lower()}
+    # sort results priority
+    results = dict(
+    sorted(sorted(results.items()), key=lambda item: score_result(item[0], item[1], query), reverse=True))
     if results:
         for ingredient, definition in results.items():
             highlighted_term = highlight_text(ingredient, query)
@@ -104,12 +173,9 @@ if query:
 
             st.markdown(f"### {highlighted_term}", unsafe_allow_html=True)
             st.markdown(f"<p>{highlighted_definition}</p>", unsafe_allow_html=True)
-
-            #st.subheader(ingredient)
-            #st.write(definition)
     else:
         st.info("No matching terms found.")
 else:
-    for ingredient, definition in sorted_glossary.items():
-        st.subheader(ingredient)
-        st.write(definition)
+    for key in sorted(filtered_keys):
+        st.subheader(f"**{key}**")
+        st.write(glossary[key])
