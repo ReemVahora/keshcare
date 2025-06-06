@@ -72,3 +72,5 @@ else:
 
 if st.button("Quiz", key="back_button"):
     st.switch_page("pages/0_quiz.py")
+
+
