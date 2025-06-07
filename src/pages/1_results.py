@@ -4,24 +4,16 @@ import plotly.express as px
 import re
 import json
 
+
 st.set_page_config(page_title="KeshCare", page_icon="🪷")
 with open("styles.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-st.title("Your Results")
 
-if st.session_state.results:
-    results = st.session_state.results
+#####################################################################################
+#Abstracted methods
 
-    # extract and clean
-    data_list = re.findall(r"\{.*?\}", results)
-    init_string = data_list[0].replace("{", "").replace("}", "")
-    data_extract = data_list[1]
-    results = results.replace("✓", "").replace(data_extract, "").replace(init_string, "").replace("{", "").replace("}", "")
-    
-    # init string
-    st.write(init_string)
-
+def printPieChart(data_extract):
     # load pie data
     pie_data = json.loads(data_extract)
 
@@ -30,7 +22,6 @@ if st.session_state.results:
         'Percentage': list(pie_data.values())
     })
 
-
     # Pie chart attributes
     dosha_colors = {
     "Vata": "#A1BFBC",
@@ -38,12 +29,12 @@ if st.session_state.results:
     "Kapha": "#BAC568"
     }
     fig = px.pie(df,
-                 names='Dosha',
-                 values='Percentage',
-                 color="Dosha",
-                 color_discrete_map=dosha_colors,
-                 title="Your Dosha Composition"
-                 )
+                    names='Dosha',
+                    values='Percentage',
+                    color="Dosha",
+                    color_discrete_map=dosha_colors,
+                    title="Your Dosha Composition"
+                    )
     fig.update_traces(
         textposition='inside',
         textinfo='label+percent',
@@ -64,13 +55,60 @@ if st.session_state.results:
 
     st.plotly_chart(fig, use_container_width=True)
 
+
+def printResults(index):
+    #st.session_state.results_list = False
+    results = st.session_state.results[index]
+
+    # extract and clean
+    data_list = re.findall(r"\{.*?\}", results) 
+    init_string = data_list[0].replace("{", "").replace("}", "")
+    data_extract = data_list[1]
+    results = results.replace("✓", "").replace(data_extract, "").replace(init_string, "").replace("{", "").replace("}", "")
+    
+    # init string
+    st.write(init_string)
+
+    printPieChart(data_extract)
+    
     # rest of results
     st.write(results)
 
-else:
-    st.warning("No results found. Please complete the quiz first.")
+    if len(st.session_state.results) > 1:
+        if st.button("All results", key="results_list_button"):
+            st.session_state.results_list = True
+            st.rerun()
+    
+    if st.button("Quiz", key="quiz_button"):
+        st.switch_page("pages/0_quiz.py")
 
-if st.button("Quiz", key="back_button"):
-    st.switch_page("pages/0_quiz.py")
+
+
+def displayResultsList():
+    if len(st.session_state.results) == 1:
+        printResults(0)
+    for i in reversed(range(0, len(st.session_state.results))):
+        with col2:
+            if st.button("Your Results - #" + str(i)):
+                st.session_state.results_list = False
+                st.session_state.results_index = i
+                st.rerun()
+    if st.button("Quiz", key="quiz_button"):
+        st.switch_page("pages/0_quiz.py")
+
+
+########################################################################################
+
+
+st.title("Your Results")
+col1, col2, col3 = st.columns([3, 2, 3])
+
+if len(st.session_state.results) == 0:
+    st.warning("No results found. Please complete the quiz first.")
+elif st.session_state.results_list:
+    displayResultsList()
+else: 
+    printResults(st.session_state.results_index)
+
 
 

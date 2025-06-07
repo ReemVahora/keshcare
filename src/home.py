@@ -8,9 +8,14 @@ with open("styles.css") as f:
 
 if "quiz_started" not in st.session_state:
     st.session_state.quiz_started = False
-# if results tab is visible from the start
+
 if "results" not in st.session_state:
-    st.session_state.results = prompts.testResults()
+    st.session_state.results = []
+if "results_index" not in st.session_state:
+    st.session_state.results_index = 0
+if "results_list" not in st.session_state:
+    st.session_state.results_list = False
+
 
 st.markdown('<h1 class="custom-title">KeshCare</h1>', unsafe_allow_html=True)
 st.write(prompts.buildHomeInfo())

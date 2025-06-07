@@ -34,7 +34,7 @@ def copy_button(text: str):
     # Unique ID for each button to avoid conflicts
     button_id = str(uuid.uuid4()).replace("-", "")
     html_code = f"""
-    <button id="{button_id}" style="
+    <button id="{button_id}" title="Copy text" style="
         background-color:#eee;
         float: right;
         border:none;
@@ -93,7 +93,8 @@ def bot_response_logic(user_input):
         st.session_state.chat_history.append({"role": "assistant", "content": bot_reply})
     
     if "✓" in bot_reply:
-        st.session_state.results = bot_reply
+        st.session_state.results.append(bot_reply)
+        #st.session_state.results = bot_reply
     
     st.session_state.awaiting_response = True
     st.rerun()
