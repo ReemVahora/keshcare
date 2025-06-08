@@ -80,13 +80,14 @@ def bot_response_logic(user_input):
             model="gpt-4-turbo",
             messages = st.session_state.chat_history,
             temperature=0.7,
-            max_tokens=500
+            max_tokens=750
         )
         bot_reply = response.choices[0].message.content
         st.session_state.chat_history.append({"role": "assistant", "content": bot_reply})
     
     if "✓" in bot_reply:
         st.session_state.results.append(bot_reply)
+        st.session_state.results_index = st.session_state.results_index + 1
         #st.session_state.results = bot_reply
     
     st.session_state.awaiting_response = True
