@@ -3,7 +3,7 @@ import prompts
 
 from pages.utils.session import initSessionState
 
-st.set_page_config(page_title="KeshCare", page_icon="🪷")
+st.set_page_config(page_title="KeshCare", page_icon="🪷", layout="centered")
 
 initSessionState()
 

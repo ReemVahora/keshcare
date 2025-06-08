@@ -31,13 +31,13 @@ h1 {
     margin-bottom: 0.2em !important;
 }
 
-p {
-    margin-bottom: 1.5em;
-}
-
 .custom-title {
     text-shadow: 2px 2px 4px #B87333;
     font-size:11em !important;
+}
+
+p {
+    margin-bottom: 1.5em;
 }
 
 header {
