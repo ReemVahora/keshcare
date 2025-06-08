@@ -105,7 +105,7 @@ if len(st.session_state.results) == 0:
 elif st.session_state.results_list:
     displayResultsList()
 else: 
-    printResults(st.session_state.results_index)
+    printResults(st.session_state.results_index-1)
 
 if st.button("Quiz", key="quiz_button"):
     st.switch_page("pages/0_Quiz.py")
