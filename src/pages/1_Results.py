@@ -75,9 +75,6 @@ def printResults(index):
         if st.button("All results", key="results_list_button"):
             st.session_state.results_list = True
             st.rerun()
-    
-    if st.button("Quiz", key="quiz_button"):
-        st.switch_page("pages/0_Quiz.py")
 
 
 
@@ -106,3 +103,6 @@ elif st.session_state.results_list:
     displayResultsList()
 else: 
     printResults(st.session_state.results_index-1)
+
+if st.button("Quiz", key="quiz_button"):
+    st.switch_page("pages/0_Quiz.py")

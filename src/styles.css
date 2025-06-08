@@ -54,6 +54,11 @@ header {
     margin-top: 1em;
 }
 
+.stButton > button:active {
+    color: #6B4C3B;
+    background-color: #FAF5EE;
+}
+
 .stPlotlyChart {
     display: flex;
     justify-content: center;
