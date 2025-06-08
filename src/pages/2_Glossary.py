@@ -2,6 +2,10 @@ import streamlit as st
 import re
 import prompts
 
+from pages.utils.session import initSessionState
+
+initSessionState()
+
 st.set_page_config(page_title="KeshCare", page_icon="🪷")
 
 with open("src/styles.css") as f:

@@ -2,7 +2,9 @@ import streamlit as st
 import openai
 import uuid
 
-import prompts
+from pages.utils.session import initSessionState
+
+initSessionState()
 
 st.set_page_config(page_title="KeshCare", page_icon="🪷")
 
@@ -12,17 +14,6 @@ with open("src/styles.css") as f:
 st.session_state.quiz_started = True
 
 client = openai.OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
-
-if "chat_history" not in st.session_state:
-    st.session_state.chat_history = [
-        {"role": "system", "content": prompts.buildSystemPrompt()},
-        {"role": "system", "content": f"Here is a list of ayurvedic ingredients and practises you might find handy: {prompts.getGlossary()}"},
-        {"role": "user", "content": "Hi, I'm ready for the introduction."},
-        {"role": "assistant", "content": prompts.buildIntro()}
-    ]
-if "awaiting_response" not in st.session_state:
-    st.session_state.awaiting_response = True
-
 
 #############################################################################################################
 

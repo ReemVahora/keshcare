@@ -4,6 +4,10 @@ import plotly.express as px
 import re
 import json
 
+from pages.utils.session import initSessionState
+
+initSessionState()
+
 st.set_page_config(page_title="KeshCare", page_icon="🪷")
 
 with open("src/styles.css") as f:
