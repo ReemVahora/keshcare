@@ -27,9 +27,6 @@ if "awaiting_response" not in st.session_state:
 
 # Abstracted methods
 
-
-
-
 def copy_button(text: str):
     # Unique ID for each button to avoid conflicts
     button_id = str(uuid.uuid4()).replace("-", "")
@@ -56,13 +53,6 @@ def copy_button(text: str):
     """
     st.components.v1.html(html_code, height=30)
 
-# # Example usage:
-# with st.chat_message("assistant"):
-#     message = "Here is some helpful message text you want to copy."
-#     st.markdown(message)
-#     copy_button(message)
-
-
 
 def display_chat_history():
     for i, msg in enumerate(st.session_state.chat_history[3:]):
@@ -74,11 +64,13 @@ def display_chat_history():
             st.chat_message(msg["role"]).write(msg["content"])
             copy_button(msg["content"])
 
+
 def user_input_logic(user_input):
     if user_input:
         st.session_state.chat_history.append({"role": "user", "content": user_input})
         st.session_state.awaiting_response = False  #turn off while bot responds
         st.rerun()
+
 
 def bot_response_logic(user_input):
     with st.spinner("Thinking..."):
@@ -108,7 +100,6 @@ if st.session_state.quiz_started:
     display_chat_history()
 
 if st.session_state.quiz_started:
-    # user input only here once, so problem fixed. 
     user_input = st.chat_input("Your response")
     
     if st.session_state.awaiting_response: user_input_logic(user_input)

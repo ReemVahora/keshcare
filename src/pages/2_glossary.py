@@ -7,9 +7,7 @@ with open("styles.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 st.title("Glossary")
-
 glossary = prompts.getGlossary()
-
 glossary = dict(sorted(glossary.items()))
 
 # Category mapping
@@ -54,7 +52,7 @@ if selected_categories:
     for cat in selected_categories:
         filtered_keys.update(categories[cat])
 else:
-    filtered_keys = set(glossary.keys())  # Show all if no filter
+    filtered_keys = set(glossary.keys())  # show all if no filter
 
 ###################################################################################################
 # abstracted functions
@@ -74,6 +72,7 @@ def highlight_text(text, keyword):
         f"<mark>{keyword_lower}</mark>"
     )
 
+# search priority sorter
 def score_result(key, value, query):
     pattern = r'\b{}\b'.format(re.escape(query.lower()))  # whole word pattern
     title = key.lower()
@@ -101,7 +100,7 @@ if query:
         k: glossary[k]
         for k in filtered_keys
         if query.lower() in k.lower() or query.lower() in glossary[k].lower()}
-    # sort results priority
+    # priority (4 to 0), and alphabetical order within each
     results = dict(
     sorted(sorted(results.items()), key=lambda item: score_result(item[0], item[1], query), reverse=True))
     if results:

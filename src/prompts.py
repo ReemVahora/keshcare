@@ -48,6 +48,7 @@ Now for generating results, follow these following steps IN ORDER:
 STEP 1 - FORMAT RESULTS INTRO (the first 1-2 sentences)
 
 The first 1-2 sentences of the RESULTS generated will be conversationally following the user's last reponse.
+These will usually be before you start with the first subheading ("Recommended Oils, Herbs, and Natural Treatments"). 
 Wrap up this part with curly braces, and begin with "✓".
 FOR EXAMPLE;
 ✓{Thank you for sharing your goal of adding volume to your hair. Based on your responses about your curly, medium-density hair with a balanced scalp, and your interest in natural, organic care, let's determine the best Ayurvedic approach for you.}
@@ -174,6 +175,31 @@ def getGlossary():
         "Srotas": "Body channels; blockages here (especially in rasavaha and raktavaha srotas) can impair hair nourishment.",
         "Vaidya": "A trained Ayurvedic practitioner who diagnoses dosha imbalances and prescribes personalized treatments."
     }
+
+
+def buildInfo():
+    return f"""
+This app is created as a passion project to guide self-awareness through personalized Ayurvedic insights. It offers a gentle, educational approach rooted in traditional wisdom, helping you explore your dosha constitution with respect and care.
+
+### Privacy & Data Use
+
+Your privacy is our priority. **We do not collect, store, or share any personal information**, including names or emails. All quiz responses remain local on your device and are used solely to provide your personalized results during your session.
+
+### Terms of Use
+
+This app is designed for **educational and informational purposes only**. It is not a substitute for professional medical advice, diagnosis, or treatment. Please consult a qualified healthcare provider for personalized medical guidance.
+
+### Contact
+
+**Questions or feedback?** Feel free to reach out via email:  
+**[vahora.reem@gmail.com](mailto:vahora.reem@gmail.com)**
+
+### Accessibility Commitment
+
+We strive to make this app welcoming and accessible to everyone. If you experience any difficulties or have suggestions to improve accessibility, please contact us.
+
+Thank you for trusting this space to explore your wellness. May your journey be insightful and balanced.
+"""
 
 
 def testResults():

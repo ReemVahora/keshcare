@@ -57,7 +57,6 @@ def printPieChart(data_extract):
 
 
 def printResults(index):
-    #st.session_state.results_list = False
     results = st.session_state.results[index]
 
     # extract and clean
@@ -66,14 +65,12 @@ def printResults(index):
     data_extract = data_list[1]
     results = results.replace("✓", "").replace(data_extract, "").replace(init_string, "").replace("{", "").replace("}", "")
     
-    # init string
-    st.write(init_string)
-
+    st.write(init_string) # initial para
     printPieChart(data_extract)
     
-    # rest of results
-    st.write(results)
+    st.write(results) # rest of results
 
+    # button to display results list
     if len(st.session_state.results) > 1:
         if st.button("All results", key="results_list_button"):
             st.session_state.results_list = True
@@ -89,7 +86,7 @@ def displayResultsList():
         printResults(0)
     for i in reversed(range(0, len(st.session_state.results))):
         with col2:
-            if st.button("Your Results - #" + str(i)):
+            if st.button("Your Results - #" + str(i+1)):
                 st.session_state.results_list = False
                 st.session_state.results_index = i
                 st.rerun()
@@ -109,6 +106,3 @@ elif st.session_state.results_list:
     displayResultsList()
 else: 
     printResults(st.session_state.results_index)
-
-
-
