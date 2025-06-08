@@ -3,13 +3,10 @@ import openai
 import uuid
 
 import prompts
-import os
 
 st.set_page_config(page_title="KeshCare", page_icon="🪷")
 
-css_path = "D:\Projects\keshcare\src\styles.css"
-
-with open(css_path) as f:
+with open("src/styles.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 st.session_state.quiz_started = True
@@ -63,7 +60,7 @@ def display_chat_history():
         if "✓" in msg["content"]:
             st.chat_message(msg["role"]).write("Your results are ready below! Any questions or concerns?")
             if st.button("View Results", key=f"view_results_btn_{i}"):
-                st.switch_page("pages/1_results.py")
+                st.switch_page("pages/1_Results.py")
         else:
             st.chat_message(msg["role"]).write(msg["content"])
             copy_button(msg["content"])

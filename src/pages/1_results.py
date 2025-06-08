@@ -3,13 +3,10 @@ import pandas as pd
 import plotly.express as px
 import re
 import json
-import os
 
 st.set_page_config(page_title="KeshCare", page_icon="🪷")
 
-css_path = "D:\Projects\keshcare\src\styles.css"
-
-with open(css_path) as f:
+with open("src/styles.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
@@ -80,7 +77,7 @@ def printResults(index):
             st.rerun()
     
     if st.button("Quiz", key="quiz_button"):
-        st.switch_page("pages/0_quiz.py")
+        st.switch_page("pages/0_Quiz.py")
 
 
 
