@@ -15,8 +15,8 @@
 
 .stMainBlockContainer {
     max-width: 800px;
-    margin: 2rem auto;               /* center it */
-    background-color: #FAF5EE !important;       /* white card */
+    margin: 3rem 1rem;
+    background-color: #FAF5EE !important;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -25,7 +25,6 @@
 h1 {
     text-align: center;
     font-family: 'Great Vibes' !important;
-    font-size: 6em !important;
     font-weight: normal !important;
     text-shadow: 1px 1px 2px #B87333;
     margin-bottom: 0.2em !important;
@@ -33,7 +32,7 @@ h1 {
 
 .custom-title {
     text-shadow: 2px 2px 4px #B87333;
-    font-size:11em !important;
+    
 }
 
 p {
@@ -80,4 +79,58 @@ mark {
   color: inherit;
   padding: 0;
   border-radius: 4px;
+}
+
+
+
+@media (max-width: 2560px) {
+    .custom-title {
+        font-size: 11em !important;
+    }
+    h1 {
+        font-size: 6em !important;
+    }
+}
+@media (max-width: 745px) {
+    .custom-title {
+        font-size: 9em !important;
+    }
+    h1 {
+        font-size: 6em !important;
+    }
+}
+@media (max-width: 620px) {
+    .custom-title {
+        font-size: 7.5em !important;
+    }
+    h1 {
+        font-size: 5em !important;
+    }
+}
+@media (max-width: 540px) {
+    .custom-title {
+        font-size: 6em !important;
+    }
+    h1 {
+        font-size: 4em !important;
+    }
+}
+@media (max-width: 450px) {
+    .custom-title {
+        font-size: 5em !important;
+    }
+    h1 {
+        font-size: 3.5em !important;
+    }
+}
+@media (max-width: 390px) {
+    .custom-title {
+        font-size: 4em !important;
+    }
+    h1 {
+        font-size: 2.8em !important;
+    }
+    .stMainBlockContainer {
+        padding: 1.5rem;
+    }
 }
