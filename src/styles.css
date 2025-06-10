@@ -152,4 +152,9 @@ mark {
         margin-left: 1.5rem;
         padding: 0.5em 0.7em;
     }
+
+    .stApp {
+        background-blend-mode: multiply !important;
+        background-color: #E5D5B5 !important;   
+    }
 }
