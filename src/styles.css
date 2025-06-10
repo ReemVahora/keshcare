@@ -9,7 +9,8 @@
     background-repeat: repeat !important;        
     background-size: 150px 150px !important;            
     background-position: top left !important;
-    background-blend-mode: multiply;
+    background-blend-mode: multiply !important;
+    background-color: #E5D5B5 !important;
     
 }
 
