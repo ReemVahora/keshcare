@@ -16,7 +16,7 @@
 .stMainBlockContainer {
     max-width: 800px;
     margin: 3rem 1rem;
-    background-color: #FAF5EE !important;
+    background-color: rgba(250, 245, 238, 1) !important;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -32,7 +32,6 @@ h1 {
 
 .custom-title {
     text-shadow: 2px 2px 4px #B87333;
-    
 }
 
 p {
@@ -85,7 +84,8 @@ mark {
 
 @media (max-width: 2560px) {
     .custom-title {
-        font-size: 11em !important;
+        /*font-size: 11em !important;*/
+        font-size: 15vw !important;
     }
     h1 {
         font-size: 6em !important;
@@ -93,7 +93,7 @@ mark {
 }
 @media (max-width: 745px) {
     .custom-title {
-        font-size: 9em !important;
+        /*font-size: 9em !important;*/
     }
     h1 {
         font-size: 6em !important;
@@ -101,7 +101,7 @@ mark {
 }
 @media (max-width: 620px) {
     .custom-title {
-        font-size: 7.5em !important;
+        /*font-size: 7.5em !important;*/
     }
     h1 {
         font-size: 5em !important;
@@ -109,7 +109,7 @@ mark {
 }
 @media (max-width: 540px) {
     .custom-title {
-        font-size: 6em !important;
+        /*font-size: 6em !important;*/
     }
     h1 {
         font-size: 4em !important;
@@ -117,7 +117,7 @@ mark {
 }
 @media (max-width: 450px) {
     .custom-title {
-        font-size: 5em !important;
+        /*font-size: 5em !important;*/
     }
     h1 {
         font-size: 3.5em !important;
@@ -125,12 +125,30 @@ mark {
 }
 @media (max-width: 390px) {
     .custom-title {
-        font-size: 4em !important;
+        /*font-size: 5em !important;*/
+        font-size: 24vw !important;
     }
     h1 {
         font-size: 2.8em !important;
     }
+    h3 {
+        padding-left: 1.5rem !important;
+    }
+    p {
+        margin-left: 1.5rem !important;
+        margin-right: 1.9rem !important;
+        font-size: small !important;
+
+    }
     .stMainBlockContainer {
-        padding: 1.5rem;
+        padding-left: 0.5rem !important;
+        padding-right: 0.1rem !important;
+        padding-top: 0.5rem;
+        background-color: rgba(250, 245, 238, 0.95) !important;
+    }
+
+    .stButton > button {
+        margin-left: 1.5rem;
+        padding: 0.5em 0.7em;
     }
 }
