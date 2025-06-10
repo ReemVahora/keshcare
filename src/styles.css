@@ -145,7 +145,7 @@ mark {
         padding-left: 0.5rem !important;
         padding-right: 0.1rem !important;
         padding-top: 0.5rem;
-        background-color: rgba(250, 245, 238, 0.95) !important;
+        /*background-color: rgba(250, 245, 238, 0.95) !important;*/
     }
 
     .stButton > button {
