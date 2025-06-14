@@ -94,7 +94,7 @@ def bot_response_logic(user_input):
     
     if "✓" in bot_reply:
         st.session_state.results.append(bot_reply)
-        st.session_state.results_index = st.session_state.results_index + 1
+        st.session_state.results_index += 1
         #st.session_state.results = bot_reply
     
     st.session_state.awaiting_response = True

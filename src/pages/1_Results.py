@@ -91,9 +91,6 @@ def displayResultsList():
                 st.session_state.results_list = False
                 st.session_state.results_index = i
                 st.rerun()
-    if st.button("Quiz", key="quiz_button"):
-        st.switch_page("pages/0_Quiz.py")
-
 
 ########################################################################################
 
@@ -101,12 +98,12 @@ def displayResultsList():
 st.title("Your Results")
 col1, col2, col3 = st.columns([3, 2, 3])
 
-if len(st.session_state.results) == 0:
+if st.session_state.results_index == -1:
     st.warning("No results found. Please complete the quiz first.")
 elif st.session_state.results_list:
     displayResultsList()
 else: 
-    printResults(st.session_state.results_index-1)
+    printResults(st.session_state.results_index)
 
 if st.button("Quiz", key="quiz_button"):
     st.switch_page("pages/0_Quiz.py")

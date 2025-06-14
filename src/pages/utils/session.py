@@ -12,7 +12,7 @@ def initSessionState():
         {"role": "assistant", "content": prompts.buildIntro()}
         ],
         "results" : [],
-        "results_index" : 0,
+        "results_index" : -1,
         "results_list" : False
     }
 
