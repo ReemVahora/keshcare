@@ -173,7 +173,8 @@ def getGlossary():
         "Ama": "Toxic residue from undigested food; contributes to dull, thinning hair and scalp congestion.",
         "Rasa Dhatu": "The first and most fundamental bodily tissue; nourishes all other tissues including the scalp and hair.",
         "Srotas": "Body channels; blockages here (especially in rasavaha and raktavaha srotas) can impair hair nourishment.",
-        "Vaidya": "A trained Ayurvedic practitioner who diagnoses dosha imbalances and prescribes personalized treatments."
+        "Vaidya": "A trained Ayurvedic practitioner who diagnoses dosha imbalances and prescribes personalized treatments.",
+        "Bhringraj Oil": "Traditional Ayurvedic oil known to promote hair growth, prevent premature greying, and reduce hair fall; especially beneficial for Vata and Pitta doshas."    
     }
 
 

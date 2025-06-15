@@ -26,7 +26,7 @@ categories = {
     "Oils & Carriers": [
         "Sesame Oil", "Coconut Oil", "Castor Oil", "Mustard Oil", "Almond Oil", "Tea Tree Oil",
         "Rosemary Oil", "Lavender Oil", "Peppermint Oil", "Lemongrass Oil", "Cedarwood Oil",
-        "Brahmi Ghee", "Rosewater"
+        "Brahmi Ghee", "Rosewater", "Bhringraj Oil"
     ],
     "Ayurvedic Therapies & Routines": [
         "Shiroabhyanga", "Abhyanga", "Nasya", "Shirodhara", "Takradhara", "Panchakarma", "Basti",
