@@ -137,7 +137,7 @@ mark {
     .stMainBlockContainer {
         transform: translateY(200px) !important;
         max-height: 240vh !important; 
-        background-color: rgba(250, 245, 238, 0.9) !important;    
+        background-color: rgba(250, 245, 238, 0.95) !important;    
     }
     .stMainBlockContainer > div {
         transform: translateY(-170px);

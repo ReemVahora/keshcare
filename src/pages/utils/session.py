@@ -11,8 +11,8 @@ def initSessionState():
         {"role": "user", "content": "Hi, I'm ready for the introduction."},
         {"role": "assistant", "content": prompts.buildIntro()}
         ],
-        "results" : [prompts.testResults()],
-        "results_index" : 0,
+        "results" : [],
+        "results_index" : -1,
         "results_list" : False
     }
 

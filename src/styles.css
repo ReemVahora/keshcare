@@ -121,7 +121,7 @@ mark {
 }
 @media (max-width: 390px) { */
     h1 {
-        font-size: 19vw !important;
+        font-size: 18vw !important;
     }
     .stMainBlockContainer {
         padding-left: 0 !important;
