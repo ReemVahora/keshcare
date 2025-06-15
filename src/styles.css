@@ -84,7 +84,6 @@ mark {
 
 @media (max-width: 2560px) {
     .custom-title {
-        /*font-size: 11em !important;*/
         font-size: 15vw !important;
     }
     h1 {
@@ -92,8 +91,7 @@ mark {
     }
 }
 @media (max-width: 745px) {
-    .custom-title {
-        /*font-size: 9em !important;*/
+    /* .custom-title {
     }
     h1 {
         font-size: 6em !important;
@@ -101,7 +99,6 @@ mark {
 }
 @media (max-width: 620px) {
     .custom-title {
-        /*font-size: 7.5em !important;*/
     }
     h1 {
         font-size: 5em !important;
@@ -109,14 +106,13 @@ mark {
 }
 @media (max-width: 540px) {
     .custom-title {
-        /*font-size: 6em !important;*/
     }
     h1 {
         font-size: 4em !important;
     }
 }
 @media (max-width: 450px) {
-    /* .custom-title {
+    .custom-title {
     }
     h1 {
         font-size: 3.5em !important;
