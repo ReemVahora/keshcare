@@ -124,33 +124,25 @@ mark {
     }
 }
 @media (max-width: 390px) {
-    h1 {
-        font-size: 19vw !important;
+    .custom-title {
+        font-size: 24vw !important;
+        width: 100vw !important;
+        transform: translateY(-65px) !important;
+        margin-left: -2rem !important;
+        max-width: 800px;
+        background-color: rgba(250, 245, 238, 1) !important;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
     .stMainBlockContainer {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
+        transform: translateY(200px) !important;
+        max-height: 240vh !important; 
+        background-color: rgba(250, 245, 238, 0.9) !important;    
     }
     .stMainBlockContainer > div {
-        margin-left: 2rem;
-        margin-right: 2rem;
-    }
-    .stMultiSelect, .stTextInput {
-        margin-top: -20px;
-    }
-    h3 {
-        font-size: 6.5vw !important;
+        transform: translateY(-170px);
     }
     .stButton > button {
         padding: 0.5em 0.7em;
     }
-    .stPlotlyChart {
-        margin-left: -1rem !important;
-        margin-right: -1rem !important;
-        max-height: 450px;
-    }
-    .infolayer tspan {
-        font-size: 7vw !important;
-    }
-
 }
