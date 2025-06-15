@@ -9,7 +9,15 @@
     background-size: 150px 150px !important;            
     background-position: top left !important;
     background-blend-mode: multiply !important;
-    mix-blend-mode: multiply !important;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-color: rgba(247, 242, 235, 0.4); /* light translucent overlay */
+  pointer-events: none;
+  z-index: -1;
 }
 
 .stMainBlockContainer {
