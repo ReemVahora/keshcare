@@ -90,8 +90,9 @@ mark {
         font-size: 6em !important;
     }
 }
-@media (max-width: 745px) {
-    /* .custom-title {
+@media (max-width: 2000px) {
+/*@media (max-width: 745px) {
+    .custom-title {
     }
     h1 {
         font-size: 6em !important;
