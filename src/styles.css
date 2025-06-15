@@ -111,14 +111,14 @@ mark {
         font-size: 4em !important;
     }
 }
-@media (max-width: 450px) {
+/* @media (max-width: 450px) {
     .custom-title {
     }
     h1 {
         font-size: 3.5em !important;
     }
-}
-@media (max-width: 390px) {
+} */
+@media (max-width: 450px) {
     h1 {
         font-size: 18vw !important;
     }

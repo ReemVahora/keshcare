@@ -121,15 +121,15 @@ mark {
         font-size: 4em !important;
     }
 }
-@media (max-width: 450px) {
+/* @media (max-width: 450px) {
     .custom-title {
-        /*font-size: 5em !important;*/
+        font-size: 5em !important;
     }
     h1 {
         font-size: 3.5em !important;
     }
-}
-@media (max-width: 390px) {
+} */
+@media (max-width: 450px) {
     .custom-title {
         font-size: 24vw !important;
         width: 100vw !important;
