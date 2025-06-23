@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Ballet:opsz@16..72&family=Beau+Rivage&family=Carattere&family=Ephesis&family=Fleur+De+Leah&family=Great+Vibes&family=Gwendolyn:wght@400;700&family=Imperial+Script&family=Lavishly+Yours&family=Lovers+Quarrel&family=Lugrasimo&family=Mea+Culpa&family=MonteCarlo&family=Updock&display=swap');
+@import url("styles.css");
 
+
+/* @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Ballet:opsz@16..72&family=Beau+Rivage&family=Carattere&family=Ephesis&family=Fleur+De+Leah&family=Great+Vibes&family=Gwendolyn:wght@400;700&family=Imperial+Script&family=Lavishly+Yours&family=Lovers+Quarrel&family=Lugrasimo&family=Mea+Culpa&family=MonteCarlo&family=Updock&display=swap');
 
 .stApp {
     font-family: 'Georgia', serif;
@@ -8,39 +10,30 @@
     background-repeat: repeat !important;        
     background-size: 150px 150px !important;            
     background-position: top left !important;
-}
-
-/* body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-color: rgba(247, 242, 235, 0.4); 
-  pointer-events: none;
-  z-index: -1;
 } */
 
-.stMainBlockContainer {
+/* .stMainBlockContainer {
     max-width: 800px;
     margin: 3rem 1rem;
     background-color: rgba(250, 245, 238, 1) !important;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
+} */
 
-h1 {
+/* h1 {
     text-align: center;
     font-family: 'Great Vibes' !important;
     font-weight: normal !important;
     text-shadow: 1px 1px 2px #B87333;
     margin-bottom: 0.2em !important;
-}
+} */
 
 .custom-title {
     text-shadow: 2px 2px 4px #B87333;
 }
 
-p {
+/* p {
     margin-bottom: 1.5em;
 }
 
@@ -71,8 +64,8 @@ header {
     border-radius: 20px;
     margin: 10px 20px;
 
-}
-
+} */
+/* 
 input, textarea {
     border-radius: 6px;
     border: 1px solid #6B4C3B;
@@ -83,7 +76,7 @@ mark {
   color: inherit;
   padding: 0;
   border-radius: 4px;
-}
+} */
 
 
 
@@ -92,32 +85,20 @@ mark {
         /*font-size: 11em !important;*/
         font-size: 15vw !important;
     }
-    h1 {
-        font-size: 6em !important;
-    }
 }
 @media (max-width: 745px) {
     .custom-title {
         /*font-size: 9em !important;*/
-    }
-    h1 {
-        font-size: 6em !important;
     }
 }
 @media (max-width: 620px) {
     .custom-title {
         /*font-size: 7.5em !important;*/
     }
-    h1 {
-        font-size: 5em !important;
-    }
 }
 @media (max-width: 540px) {
     .custom-title {
         /*font-size: 6em !important;*/
-    }
-    h1 {
-        font-size: 4em !important;
     }
 }
 /* @media (max-width: 450px) {

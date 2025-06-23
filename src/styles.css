@@ -76,53 +76,29 @@ mark {
 
 
 @media (max-width: 2560px) {
-    .custom-title {
-        font-size: 15vw !important;
-    }
     h1 {
         font-size: 6em !important;
     }
 }
 @media (max-width: 745px) {
-    .custom-title {
-    }
     h1 {
         font-size: 6em !important;
     }
 }
 @media (max-width: 620px) {
-    .custom-title {
-    }
     h1 {
         font-size: 5em !important;
     }
 }
 @media (max-width: 540px) {
-    .custom-title {
-    }
     h1 {
         font-size: 4em !important;
     }
 }
-/* @media (max-width: 450px) {
-    .custom-title {
-    }
-    h1 {
-        font-size: 3.5em !important;
-    }
-} */
 @media (max-width: 450px) {
     h1 {
         font-size: 18vw !important;
     }
-    /* .stMainBlockContainer {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-    .stMainBlockContainer > div {
-        margin-left: 2rem;
-        margin-right: 2rem;
-    } */
     .stMultiSelect, .stTextInput {
         margin-top: -20px;
     }
