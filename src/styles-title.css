@@ -4,21 +4,20 @@
 .stApp {
     font-family: 'Georgia', serif;
     background-color: #E5D5B5 !important;
-    background-image: url('https://img.freepik.com/premium-photo/seamless-pattern-with-lotus-flowers-beige-background-vector-art-illustration_820340-11435.jpg') !important;
+    background-image: url('https://github.com/ReemVahora/keshcare/blob/master/assets/lotus-blended.png?raw=true') !important;
     background-repeat: repeat !important;        
     background-size: 150px 150px !important;            
     background-position: top left !important;
-    background-blend-mode: multiply !important;
 }
 
-body::before {
+/* body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-color: rgba(247, 242, 235, 0.4); /* light translucent overlay */
+  background-color: rgba(247, 242, 235, 0.4); 
   pointer-events: none;
   z-index: -1;
-}
+} */
 
 .stMainBlockContainer {
     max-width: 800px;

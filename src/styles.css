@@ -3,16 +3,13 @@
 
 .stApp {
     font-family: 'Georgia', serif;
-    
-    /*background-image: url('https://img.freepik.com/premium-photo/seamless-pattern-with-lotus-flowers-beige-background-vector-art-illustration_820340-11435.jpg') !important;*/
-    background-image: url('https://img.freepik.com/premium-photo/seamless-pattern-with-lotus-flowers-beige-background-vector-art-illustration_820340-11435.jpg') !important;
+    background-color: #E5D5B5 !important;
+    background-image: url('https://github.com/ReemVahora/keshcare/blob/master/assets/lotus-blended.png?raw=true') !important;
     background-repeat: repeat !important;        
     background-size: 150px 150px !important;            
     background-position: top left !important;
-    background-blend-mode: multiply !important;
-    background-color: #E5D5B5 !important;
-    
 }
+
 
 .stMainBlockContainer {
     max-width: 800px;
