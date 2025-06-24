@@ -23,9 +23,14 @@
 h1 {
     text-align: center;
     font-family: 'Great Vibes' !important;
+    font-size: 9em !important;
     font-weight: normal !important;
     text-shadow: 1px 1px 2px #B87333;
     margin-bottom: 0.2em !important;
+}
+
+h3 {
+    margin-top: 10px;
 }
 
 p {
@@ -66,6 +71,10 @@ input, textarea {
     border: 1px solid #6B4C3B;
 }
 
+.stMultiSelect, .stTextInput {
+    margin-top: -20px;
+}
+
 mark {
   background-color: #E5D5B5;
   color: inherit;
@@ -75,29 +84,37 @@ mark {
 
 
 
-@media (max-width: 2560px) {
+@media (max-width: 1300px) {
     h1 {
-        font-size: 6em !important;
+        font-size: 10vw !important;
+    }
+}
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 13vw !important;
     }
 }
 @media (max-width: 745px) {
     h1 {
-        font-size: 6em !important;
+        font-size: 15vw !important;
     }
 }
 @media (max-width: 620px) {
     h1 {
-        font-size: 5em !important;
+        font-size: 15vw !important;
+    }
+    .stMainBlockContainer {
+        padding-top: 0.75rem !important;
     }
 }
 @media (max-width: 540px) {
     h1 {
-        font-size: 4em !important;
+        font-size: 17vw !important;
     }
 }
 @media (max-width: 450px) {
     h1 {
-        font-size: 18vw !important;
+        font-size: 19vw !important;
     }
     .stMultiSelect, .stTextInput {
         margin-top: -20px;
