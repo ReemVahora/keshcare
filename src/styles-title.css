@@ -32,6 +32,7 @@
 .custom-title {
     font-size: 11em !important;
     text-shadow: 2px 2px 4px #B87333;
+    margin-bottom: 0.3em !important;
 }
 
 /* p {
@@ -128,7 +129,7 @@ mark {
         background-color: rgba(250, 245, 238, 0.95) !important;    
     }
     .stMainBlockContainer > div {
-        transform: translateY(-170px) !important;
+        transform: translateY(-150px) !important;
     }
     .stButton > button {
         padding: 0.5em 0.7em;
