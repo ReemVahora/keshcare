@@ -1,85 +1,11 @@
 @import url("styles.css");
 
 
-/* @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Ballet:opsz@16..72&family=Beau+Rivage&family=Carattere&family=Ephesis&family=Fleur+De+Leah&family=Great+Vibes&family=Gwendolyn:wght@400;700&family=Imperial+Script&family=Lavishly+Yours&family=Lovers+Quarrel&family=Lugrasimo&family=Mea+Culpa&family=MonteCarlo&family=Updock&display=swap');
-
-.stApp {
-    font-family: 'Georgia', serif;
-    background-color: #E5D5B5 !important;
-    background-image: url('https://github.com/ReemVahora/keshcare/blob/master/assets/lotus-blended.png?raw=true') !important;
-    background-repeat: repeat !important;        
-    background-size: 150px 150px !important;            
-    background-position: top left !important;
-} */
-
-/* .stMainBlockContainer {
-    max-width: 800px;
-    margin: 3rem 1rem;
-    background-color: rgba(250, 245, 238, 1) !important;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-} */
-
-/* h1 {
-    text-align: center;
-    font-family: 'Great Vibes' !important;
-    font-weight: normal !important;
-    text-shadow: 1px 1px 2px #B87333;
-    margin-bottom: 0.2em !important;
-} */
-
 .custom-title {
     font-size: 11em !important;
     text-shadow: 2px 2px 4px #B87333;
     margin-bottom: 0.3em !important;
 }
-
-/* p {
-    margin-bottom: 1.5em;
-}
-
-header {
-    background-color: rgba(0, 0, 0, 0) !important;
-}
-
-.stButton > button {
-    background-color: #6B4C3B;
-    color: white;
-    border-radius: 8px;
-    padding: 0.5em 1.2em;
-    font-weight: bold;
-    margin-top: 1em;
-}
-
-.stButton > button:active {
-    color: #6B4C3B;
-    background-color: #FAF5EE;
-}
-
-.stPlotlyChart {
-    display: flex;
-    justify-content: center;
-    
-    background-color: #F5ECE0;
-    padding: 1rem;
-    border-radius: 20px;
-    margin: 10px 20px;
-
-} */
-/* 
-input, textarea {
-    border-radius: 6px;
-    border: 1px solid #6B4C3B;
-}
-
-mark {
-  background-color: #E5D5B5;
-  color: inherit;
-  padding: 0;
-  border-radius: 4px;
-} */
-
 
 
 @media (max-width: 1300px) {
@@ -102,16 +28,7 @@ mark {
         font-size: 22vw !important;
     }
 }
-/* @media (max-width: 620px) {
-    .custom-title {
-        font-size: 22vw !important;
-    }
-}
-@media (max-width: 540px) {
-    .custom-title {
-        font-size: 22vw !important;
-    }
-} */
+
 @media (max-width: 480px) {
     .custom-title {
         font-size: 24vw !important;
