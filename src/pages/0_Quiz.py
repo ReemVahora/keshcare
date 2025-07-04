@@ -1,9 +1,9 @@
 import streamlit as st
 import openai
-import uuid
 import streamlit.components.v1 as components
 
-from pages.utils.session import initSessionState
+from pages.utils.session import initSessionState 
+from pages.utils.helpers import copy_button
 
 initSessionState()
 
@@ -31,34 +31,6 @@ def scroll_down():
     """,
     height=300,
 )
-
-
-def copy_button(text: str):
-    # Unique ID for each button to avoid conflicts
-    button_id = str(uuid.uuid4()).replace("-", "")
-    html_code = f"""
-    <button id="{button_id}" title="Copy text" style="
-        background-color:#eee;
-        float: right;
-        border:none;
-        padding:5px 5px;
-        margin-top: -12px;
-        cursor:pointer;j
-        font-size:16px;
-        border-radius:2px;
-    ">📋</button>
-    <script>
-    const btn = document.getElementById("{button_id}");
-    btn.onclick = () => {{
-        navigator.clipboard.writeText({text!r}).then(() => {{
-            btn.textContent = '✔️';
-            setTimeout(() => btn.textContent = '📋', 1500);
-        }});
-    }};
-    </script>
-    """
-    components.html(html_code, height=30)
-
 
 def display_chat_history():
     for i, msg in enumerate(st.session_state.chat_history[3:]):

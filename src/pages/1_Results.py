@@ -5,6 +5,7 @@ import re
 import json
 
 from pages.utils.session import initSessionState
+from pages.utils.helpers import copy_button
 
 initSessionState()
 
@@ -73,6 +74,8 @@ def printResults(index):
     printPieChart(data_extract)
     
     st.write(results) # rest of results
+
+    copy_button(init_string + "\n\n\n" + data_extract+ "\n\n\n" + results)
 
     # button to display results list
     if len(st.session_state.results) > 1:
