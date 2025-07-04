@@ -3,16 +3,14 @@ import streamlit.components.v1 as components
 
 def copy_button(text: str):
     # Unique ID for each button to avoid conflicts
-    # background-color: #F4ECDC;
     button_id = str(uuid.uuid4()).replace("-", "")
     html_code = f"""
     <button id="{button_id}" title="Copy text" style="
         color: #A48172;
-        background-color: transparent;
-        float: right;
-        border: none;
+        background-color: #FAF5EE !important;
+        border: none !important;
         padding: 5px 5px;
-        padding-bottom: 10px;
+        float: right;
         cursor: pointer; j
         font-size: 16px;
         font-weight: bold;
