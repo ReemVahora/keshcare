@@ -76,10 +76,10 @@ input, textarea {
 }
 
 mark {
-  background-color: #E5D5B5;
-  color: inherit;
-  padding: 0;
-  border-radius: 4px;
+    background-color: #E5D5B5;
+    color: inherit;
+    padding: 0;
+    border-radius: 4px;
 }
 
 

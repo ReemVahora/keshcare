@@ -3,24 +3,27 @@ import streamlit.components.v1 as components
 
 def copy_button(text: str):
     # Unique ID for each button to avoid conflicts
+    # background-color: #F4ECDC;
     button_id = str(uuid.uuid4()).replace("-", "")
     html_code = f"""
     <button id="{button_id}" title="Copy text" style="
-        background-color:#eee;
+        color: #A48172;
+        background-color: transparent;
         float: right;
-        border:none;
-        padding:5px 5px;
-        margin-top: -12px;
-        cursor:pointer;j
-        font-size:16px;
-        border-radius:2px;
-    ">📋</button>
+        border: none;
+        padding: 5px 5px;
+        padding-bottom: 10px;
+        cursor: pointer; j
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 4px;
+    ">⧉</button>
     <script>
     const btn = document.getElementById("{button_id}");
     btn.onclick = () => {{
         navigator.clipboard.writeText({text!r}).then(() => {{
-            btn.textContent = '✔️';
-            setTimeout(() => btn.textContent = '📋', 1500);
+            btn.textContent = '✓';
+            setTimeout(() => btn.textContent = '⧉', 1500);
         }});
     }};
     </script>
