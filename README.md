@@ -21,7 +21,7 @@ My aim is to provide users with personalised recommended ingredients for users c
 
 ## Demo
 
-*Coming soon*
+https://keshcare-stream.streamlit.app/
 
 ---
 
