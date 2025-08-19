@@ -12,10 +12,10 @@ My aim is to provide users with personalised recommended ingredients for users c
 
 - Conversational quiz to determine your Ayurvedic dosha and hair type
 - Personalized haircare advice based on Ayurvedic principles
-- Adjustable explanation simplicity for all knowledge levels
 - Interactive chat interface for ongoing guidance
-- Tips on shampoos, conditioners, oils, and what to avoid
+- Tips on product ingredients, oils, herbs and what to avoid
 - Visual aids to illustrate dosha types and recommendations
+- Glossary for ingredients, practices and all buzzwords
 
 ---
 
@@ -32,6 +32,7 @@ https://keshcare-stream.streamlit.app/
 - Python 3.8+
 - *OpenAI API key
 - *Streamlit
+- *Plotly
 
 *see requirements.txt at installation step
 
