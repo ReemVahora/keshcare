@@ -9,6 +9,7 @@ def test_homepage_renders(monkeypatch):
     captured = {}
 
     # mock functions we care about
+    fake_st.session_state = {}
     fake_st.set_page_config = lambda **kwargs: None
     fake_st.markdown = lambda text, **kwargs: captured.setdefault("markdown", []).append(text)
     fake_st.write = lambda text: captured.setdefault("write", []).append(text)

@@ -52,7 +52,7 @@ def user_input_logic(user_input):
 
 
 def bot_response_logic(user_input):
-    with st.spinner("Thinking..."):
+    with st.spinner("Thinking..."):                                                                                                                                                                                                                                     
         #Calling OpenAI API here using chat_history
         response = client.chat.completions.create(
             model="gpt-4-turbo",
@@ -67,7 +67,6 @@ def bot_response_logic(user_input):
     if "✓" in bot_reply:
         st.session_state.results.append(bot_reply)
         st.session_state.results_index += 1
-        #st.session_state.results = bot_reply
     
     st.session_state.awaiting_response = True
     st.rerun()
@@ -80,7 +79,6 @@ def bot_response_logic(user_input):
 if st.session_state.quiz_started:
     display_chat_history()
 
-if st.session_state.quiz_started:
     user_input = st.chat_input("Your response")
     
     if st.session_state.awaiting_response: user_input_logic(user_input)
